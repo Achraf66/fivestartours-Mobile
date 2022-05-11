@@ -75,8 +75,8 @@ public class EditvolForm extends Form
             sp.setValue(v.getNbrplace());
             
        
-        Button editButton = new Button("Modifier le vol");
-        Button deleteButton = new Button("Supprimer le vol");
+        Button editButton = new Button("Modifier l airline");
+        Button deleteButton = new Button("Supprimer l airline");
        
        
        editButton.addActionListener(
