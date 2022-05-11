@@ -15,15 +15,13 @@ import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextField;
 import com.codename1.ui.layouts.BoxLayout;
-import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.spinner.NumericSpinner;
 import com.codename1.ui.spinner.Picker;
 import com.mycompany.myapp.entities.Vol;
+import com.mycompany.myapp.services.Airlineservices;
 import com.mycompany.myapp.services.Volservices;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 
@@ -35,7 +33,7 @@ public class AddvolForm extends Form
 {
 
 Volservices Volservices = new Volservices();
-
+Airlineservices airlineservices = new Airlineservices();
 
 public AddvolForm(Form previous)
 {
@@ -43,6 +41,8 @@ public AddvolForm(Form previous)
    
     setTitle("Ajouter un vol");
     setLayout(BoxLayout.y());
+    
+    
     Label lnom = new Label("Nom:");
        
         TextField tfnom = new TextField("","Nomvol");
@@ -119,6 +119,12 @@ cheuredarrive.add(lheuredarrive).add(heurearrivePicker);
 
 /**********************************************************************/
 
+/*
+Label lairline = new Label("Airline");
+Container cairline = new Container();
+cairline.add(lairline).add();*/
+/**********************************************************************/
+
 
  addButton.addActionListener(l->{
      
@@ -157,6 +163,7 @@ cheuredarrive.add(lheuredarrive).add(heurearrivePicker);
            v.setNom(tfnom.getText());
            v.setDestination(tfdestination.getText());
            v.setNbrplace((int) tfnbrplace.getValue());
+      
            
            Volservices.addVol(v);
            System.out.println(v);

@@ -57,14 +57,6 @@ public class HomeForm extends Form
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
      Form current;
     public HomeForm(){
         current=this;
@@ -74,11 +66,19 @@ public class HomeForm extends Form
         add(new Label("Choisir une option"));
         
         Button volButton = new Button("La Liste des Vols");
-     
+        Button AirlineButton = new Button("La Liste des airlines");
 
         volButton.addActionListener(e-> new ShowvolForm(current).show());
-        addAll(volButton);
+        
 
+        AirlineButton.addActionListener(l-> new ShowairlineForm(current).show());
+       addAll(volButton,AirlineButton);
+                
+        
+        
+        
+        
+        
         //SIDE MENU
         getToolbar().addCommandToLeftSideMenu("", null, (evt) -> {
         });
@@ -93,12 +93,16 @@ public class HomeForm extends Form
  
         });
          
-         
-         
-         
+     
         getToolbar().addCommandToLeftSideMenu("Vols", null, (evt) -> {
             new ShowvolForm(current).show();
         });
+        
+         getToolbar().addCommandToLeftSideMenu("Airlines", null, (evt) -> {
+            new ShowairlineForm(current).show();
+        });
+        
+        
     }
     
     

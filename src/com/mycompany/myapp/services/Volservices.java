@@ -15,11 +15,9 @@ import com.mycompany.myapp.entities.Vol;
 import com.mycompany.myapp.utils.Statics;
 import java.io.IOException;
 import java.sql.Time;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -65,7 +63,7 @@ public class Volservices
         /**********************************************************************************/
 
 /*String url = Statics.BASE_URL+"Datearrive="+v.getDatedepart()+"&Datedepart="+v.getDatearrive()+"&destination="+v.getDestination()+"&Heurearrive="+v.getHeurearrive()+"&Heuredepart="+v.getHeuredepart()+"&nbrplace="+v.getNbrplace()+"&Nom="+v.getNom(); */
-String url =  Statics.BASE_URL+"addVolJson/new?Datearrive="+v.getDatearrive()+"&Datedepart="+v.getDatedepart()+"&destination="+v.getDestination()+"&Heurearrive="+v.getHeurearrive()+"&Heuredepart="+v.getHeuredepart()+"&nbrplace="+v.getNbrplace()+"&Nom="+v.getNom() ;
+String url =  Statics.BASE_URL+"addVolJson/new?Datearrive="+v.getDatearrive()+"&Datedepart="+v.getDatedepart()+"&destination="+v.getDestination()+"&Heurearrive="+v.getHeurearrive()+"&Heuredepart="+v.getHeuredepart()+"&nbrplace="+v.getNbrplace()+"&Nom="+v.getNom();
         
         
         req.setUrl(url);
